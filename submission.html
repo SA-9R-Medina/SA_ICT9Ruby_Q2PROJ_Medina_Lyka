@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Submission</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5j5eB3zCYb+NnIHpHxPbwIQz0p3Jx59yNskPVlmL9FQrEZ1LRiCnE/VYEnQRJoPt" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="submission.html">Submit a Recipe</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Submit Your Dessert Recipe</h1>
+        <p>Share your sweetest creations with our community!</p>
+    </header>
+
+    <!-- Form -->
+    <main>
+        <form action="submit-recipe.php" method="post">
+            <!-- Recipe Title -->
+            <div class="form-group">
+                <label for="recipe-title">Recipe Title:</label>
+                <input type="text" id="recipe-title" name="recipe_title" placeholder="Enter your recipe title" required>
+            </div>
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="contributor-name">Your Name:</label>
+                <input type="text" id="contributor-name" name="contributor_name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Category -->
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="cakes">Cakes</option>
+                    <option value="cookies">Cookies</option>
+                    <option value="pies">Pies</option>
+                    <option value="ice-cream">Ice Cream</option>
+                    <option value="puddings">Puddings</option>
+                    <option value="pastries">Pastries</option>
+                </select>
+            </div>
+
+            <!-- Ingredients -->
+            <div class="form-group">
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="5" placeholder="List your ingredients here" required></textarea>
+            </div>
+
+            <!-- Instructions -->
+            <div class="form-group">
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="8" placeholder="Write your recipe instructions here" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit Recipe</button>
+            </div>
+        </form>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoY5u9ETnpO72qL9W80B0aB2jIk3sw9tx5CFuj8KW1R8vR9" crossorigin="anonymous"></script>
+</body>
+</html>
